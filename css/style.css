@@ -1,3 +1,4 @@
+/* Reset default spacing and apply base font */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,7 @@ body {
   height: 100%;
 }
 
+/* Custom fonts */
 @font-face {
   font-family: "Kajiro";
   src: url("../assets/fonts/Kajiro-Bold.ttf") format("truetype");
@@ -32,26 +34,37 @@ body {
   font-style: normal;
 }
 
+/* Main wrapper */
 #main {
   width: 100%;
   height: 100vh;
-  background-color: black;
+  /* background-color: black; */ /* removed static bg to allow slideshow */
 }
 
+/* Background container */
 #back {
   width: 100%;
   height: 100vh;
 }
 
+#back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure background images fill container */
+}
+
+/* Overlay layer on top of background */
 #top {
+  pointer-events: none; /* let clicks pass through */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #000000d8;
+  /* background-color: #000000d8; */ /* removed for transparency */
 }
 
+/* Content working area */
 #workingarea {
   position: relative;
   margin: 0 auto;
@@ -61,6 +74,7 @@ body {
   /* border: 1px solid red; */
 }
 
+/* Navigation */
 #nav {
   display: flex;
   justify-content: space-between;
@@ -89,6 +103,7 @@ body {
   font-family: "gilroy-bold";
 }
 
+/* Hero section */
 #hero {
   position: absolute;
   top: 50%;
@@ -99,18 +114,29 @@ body {
   width: 100%;
 }
 
+/* Hero left (text + button) */
 #heroleft {
   min-width: 50%;
   /* background: yellow; */
 }
 
 #heroleft .elem {
+  position: relative; /* needed for absolute h1 positioning */
   height: 9vw;
-  overflow: hidden;
+  overflow: hidden; /* hide animated text */
   /* background-color: red; */
 }
 
+/* First heading starts visible */
+#heroleft .elem h1:nth-child(1) {
+  top: 0;
+}
+
+/* Headings positioned for animation */
 #heroleft .elem h1 {
+  position: absolute;
+  top: 100%; /* hidden by default, slides into view */
+  left: 0;
   line-height: 0.9;
   font-family: "Kajiro", sans-serif;
   color: #fff;
@@ -118,13 +144,17 @@ body {
   font-size: 11vw;
 }
 
+/* Call-to-action button */
 #heroleft button {
+  pointer-events: all; /* enable interaction despite parent’s pointer-events */
   padding: 0.8vw 2vw;
   font-size: 3vw;
   margin-top: 2vw;
   font-family: "Kajiro", sans-serif;
+  cursor: pointer;
 }
 
+/* Hero right (image + text) */
 #heroright {
   display: flex;
   flex-direction: column;
@@ -140,6 +170,7 @@ body {
   text-align: right;
 }
 
+/* Portrait image block */
 #heroright #imagediv {
   width: 100%;
   height: 170px;
@@ -151,6 +182,7 @@ body {
   background-position: center;
 }
 
+/* Add extra spacing under third paragraph */
 #heroright p:nth-child(3) {
   margin-bottom: 100px;
 }
