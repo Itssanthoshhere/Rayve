@@ -4,70 +4,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Modern Landing Page</title>
+
+    <!-- Shery.js CSS for animations and effects -->
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+
+    <!-- Custom styles -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
     <div id="main">
-        <div id="back"></div>
+        <!-- Background image slideshow -->
+        <div id="back">
+            <img src="/assets/IMG_7564.JPG" alt="Background 1">
+            <img src="/assets/IMG_7565.JPG" alt="Background 2">
+            <img src="/assets/IMG_7566.JPG" alt="Background 3">
+            <img src="/assets/IMG_7567.JPG" alt="Background 4">
+            <img src="/assets/IMG_7568.JPG" alt="Background 5">
+        </div>
+
+        <!-- Top overlay section -->
         <div id="top">
             <div id="workingarea">
+
+                <!-- Navigation bar -->
                 <div id="nav">
                     <div id="nleft">
-                        <img src="assets/raybanlogo.png" alt="">
-                        <a href="#">products</a><a href="#">about</a>
+                        <img src="assets/raybanlogo.png" alt="Logo">
+                        <a href="#">products</a>
+                        <a href="#">about</a>
                     </div>
 
                     <div id="nright">
-                        <a href="#">LUXE</a><a href="#">pricing</a>
+                        <a href="#">LUXE</a>
+                        <a href="#">pricing</a>
                     </div>
                 </div>
 
+                <!-- Hero section -->
                 <div id="hero">
+
+                    <!-- Left side: animated text + button -->
                     <div id="heroleft">
+                        <!-- Rotating name block -->
                         <div class="elem">
                             <h1>david chang</h1>
-                            <h1>david chang</h1>
-                            <h1>david chang</h1>
-                            <h1>david chang</h1>
-                            <h1>david chang</h1>
+                            <h1>susan jamal</h1>
+                            <h1>olivia wilson's</h1>
+                            <h1>daniel lee</h1>
+                            <h1>liam miller's</h1>
                         </div>
 
+                        <!-- Rotating tagline block -->
                         <div class="elem">
                             <h1>Gives zero</h1>
-                            <h1>Gives zero</h1>
-                            <h1>Gives zero</h1>
-                            <h1>Gives zero</h1>
-                            <h1>Gives zero</h1>
+                            <h1>indifference is</h1>
+                            <h1>apathy is</h1>
+                            <h1>feels</h1>
+                            <h1>boredom is</h1>
                         </div>
 
+                        <!-- Rotating ending block -->
                         <div class="elem">
                             <h1>Funks.</h1>
-                            <h1>Funks.</h1>
-                            <h1>Funks.</h1>
-                            <h1>Funks.</h1>
-                            <h1>Funks.</h1>
+                            <h1>absolute.</h1>
+                            <h1>total.</h1>
+                            <h1>nothing.</h1>
+                            <h1>max.</h1>
                         </div>
 
+                        <!-- Call-to-action button -->
                         <button>Explore Now</button>
                     </div>
+
+                    <!-- Right side: text + portrait image -->
                     <div id="heroright">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <!-- Short tagline -->
+                        <p>Discover the art of timeless style.</p>
+
+                        <!-- Portrait image placeholder -->
                         <div id="imagediv"></div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, tenetur! Vero explicabo
-                            atque voluptatum assumenda repellendus distinctio rerum earum dolores optio, eligendi
-                            voluptas quos esse libero voluptatibus deleniti mollitia maiores eius quod ipsam impedit
-                            pariatur? Blanditiis nisi ut temporibus esse, necessitatibus impedit ducimus. Delectus,
-                            cumque.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio officiis sint accusamus
-                            excepturi at aut repellendus deleniti voluptates eum aspernatur corporis modi, ab nulla
-                            voluptate laborum. Incidunt sit quia, atque natus delectus omnis quidem ipsa.</p>
+
+                        <!-- First descriptive paragraph -->
+                        <p>
+                            Our latest collection redefines modern luxury — crafted with precision,
+                            designed for comfort, and built to inspire confidence in every step you take.
+                            More than just products, they are an expression of individuality and boldness.
+                        </p>
+
+                        <!-- Second descriptive paragraph -->
+                        <p>
+                            Experience fashion without compromise. Every detail, from design to finish,
+                            reflects our passion for quality and creativity. This is where elegance meets innovation.
+                        </p>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- External JS libraries -->
+
+    <!--  Gsap is needed for Basic Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Scroll Trigger is needed for Scroll Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Three.js is needed for 3d Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <!-- ControlKit is needed for Debug Panel -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+    <!-- Custom script -->
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
