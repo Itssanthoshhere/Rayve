@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "gilroy";
   box-sizing: border-box;
 }
 
@@ -8,6 +9,27 @@ html,
 body {
   width: 100%;
   height: 100%;
+}
+
+@font-face {
+  font-family: "Kajiro";
+  src: url("../assets/fonts/Kajiro-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gilroy";
+  src: url("../assets/fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gilroy-bold";
+  src: url("../assets/fonts/gilroy/Gilroy-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 #main {
@@ -31,6 +53,7 @@ body {
 }
 
 #workingarea {
+  position: relative;
   margin: 0 auto;
   width: 100%;
   height: 100vh;
@@ -63,5 +86,71 @@ body {
   font-size: 12px;
   font-weight: 600;
   color: #fff;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "gilroy-bold";
+}
+
+#hero {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#heroleft {
+  min-width: 50%;
+  /* background: yellow; */
+}
+
+#heroleft .elem {
+  height: 9vw;
+  overflow: hidden;
+  /* background-color: red; */
+}
+
+#heroleft .elem h1 {
+  line-height: 0.9;
+  font-family: "Kajiro", sans-serif;
+  color: #fff;
+  font-weight: 100;
+  font-size: 11vw;
+}
+
+#heroleft button {
+  padding: 0.8vw 2vw;
+  font-size: 3vw;
+  margin-top: 2vw;
+  font-family: "Kajiro", sans-serif;
+}
+
+#heroright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 17%;
+  /* background: green; */
+  color: #fff;
+}
+
+#heroright p {
+  font-size: 14px;
+  font-weight: 300;
+  text-align: right;
+}
+
+#heroright #imagediv {
+  width: 100%;
+  height: 170px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  /* background-color: red; */
+  background-image: url("/assets/portrait.avif");
+  background-size: cover;
+  background-position: center;
+}
+
+#heroright p:nth-child(3) {
+  margin-bottom: 100px;
 }
